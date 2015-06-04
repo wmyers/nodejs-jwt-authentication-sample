@@ -1,6 +1,6 @@
 # NodeJS JWT Authentication sample
 
-Cloned from https://github.com/auth0/nodejs-jwt-authentication-sample. Modified to only allow CORS access from http://localhost:8080
+Forked from https://github.com/auth0/nodejs-jwt-authentication-sample. Modified to only allow CORS access from http://localhost:8080
 
 This is a NodeJS API that supports username and password authentication with JWTs and has APIs that return Chuck Norris phrases. How awesome is that?
 
