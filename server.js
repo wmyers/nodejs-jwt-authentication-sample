@@ -17,7 +17,10 @@ dotenv.load();
 // new version of line
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:8080',
+  credentials: true
+}));
 
 app.use(function(err, req, res, next) {
   if (err.name === 'StatusError') {
@@ -39,6 +42,5 @@ app.use(require('./user-routes'));
 var port = process.env.PORT || 3001;
 
 http.createServer(app).listen(port, function (err) {
-  console.log('listening in http://localhost:' + port);
+  console.log('listening in http://localhost:' + port +' -', 'CORS enabled for client requests from http://localhost:8080');
 });
-
